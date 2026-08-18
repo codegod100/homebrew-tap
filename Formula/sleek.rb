@@ -28,7 +28,13 @@ class Sleek < Formula
   end
 
   def install
-    bin.install "sleek-x86_64-linux" => "sleek"
+    # Homebrew's URL-basename inference doesn't reliably land on
+    # "sleek-x86_64-linux" for this download URL shape (it's named the
+    # cached/staged file something else, e.g. "nandi.uk", in practice) --
+    # since this is a raw binary download (no archive to extract), the
+    # staged buildpath's only child is always the downloaded file itself,
+    # whatever it got named.
+    bin.install buildpath.children.first => "sleek"
 
     # This binary was compiled on BuildBuddy's remote-execution sandbox, so
     # its baked-in RUNPATH points at a build-container-only path
