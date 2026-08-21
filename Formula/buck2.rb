@@ -1,8 +1,6 @@
 class Buck2 < Formula
   desc "Build system, successor to Buck (installed via DotSlash)"
   homepage "https://buck2.build/"
-  version "2026-08-01"
-  license "Apache-2.0"
 
   # facebook/buck2 doesn't publish an official DotSlash file as a release
   # asset (unlike reindeer.rb's upstream one) -- only raw per-platform
@@ -12,9 +10,11 @@ class Buck2 < Formula
   # first run, not by Homebrew's downloader here.
   #
   # To bump: regenerate resources/buck2.dotslash (see its own commit
-  # message for how), commit it, then update this url/sha256 to match.
+  # message for how), commit it, then update this url/sha256/version.
   url "https://raw.githubusercontent.com/codegod100/homebrew-tap/4c42fdcefb61a9450d563af700f2f7e32c89ecf0/resources/buck2.dotslash"
+  version "2026-08-01"
   sha256 "994c8f90cbfa062c5e40c5d13697d5e611b5305861df9124095b0792ebc8c518"
+  license "Apache-2.0"
 
   depends_on "dotslash"
 
