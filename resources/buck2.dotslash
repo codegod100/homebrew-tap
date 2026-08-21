@@ -1,0 +1,55 @@
+#!/usr/bin/env dotslash
+
+{
+  "name": "buck2",
+  "platforms": {
+    "macos-aarch64": {
+      "size": 33542405,
+      "hash": "blake3",
+      "digest": "aa98932e6f68614d7c913730ddf8015c0040fd91998f8183d46bd22d408ac6f6",
+      "format": "zst",
+      "path": "buck2",
+      "providers": [
+        {
+          "url": "https://github.com/facebook/buck2/releases/download/2026-08-01/buck2-aarch64-apple-darwin.zst"
+        }
+      ]
+    },
+    "macos-x86_64": {
+      "size": 35807055,
+      "hash": "blake3",
+      "digest": "f1f464398c813a3117d344cc4ce3f7d2876b6b398079f6743e0e576b61bd5eea",
+      "format": "zst",
+      "path": "buck2",
+      "providers": [
+        {
+          "url": "https://github.com/facebook/buck2/releases/download/2026-08-01/buck2-x86_64-apple-darwin.zst"
+        }
+      ]
+    },
+    "linux-aarch64": {
+      "size": 36993451,
+      "hash": "blake3",
+      "digest": "753221e61c176fbb3d7f1491fa81391d8c801737d86781641aa121d26c1584ae",
+      "format": "zst",
+      "path": "buck2",
+      "providers": [
+        {
+          "url": "https://github.com/facebook/buck2/releases/download/2026-08-01/buck2-aarch64-unknown-linux-gnu.zst"
+        }
+      ]
+    },
+    "linux-x86_64": {
+      "size": 38310864,
+      "hash": "blake3",
+      "digest": "5d9e89da156dad4c7f11d6eebd3d53c03b1df0fc05b2a07abb5aad9fa90f3b4e",
+      "format": "zst",
+      "path": "buck2",
+      "providers": [
+        {
+          "url": "https://github.com/facebook/buck2/releases/download/2026-08-01/buck2-x86_64-unknown-linux-gnu.zst"
+        }
+      ]
+    }
+  }
+}
