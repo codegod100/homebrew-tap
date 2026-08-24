@@ -16,7 +16,10 @@ class ChatgptLinux < Formula
     system "tar", "xf", Dir["data.tar.*"].fetch(0)
 
     libexec.install Dir["usr/lib/chatgpt/*"]
-    bin.install_symlink libexec/"ChatGPT" => "chatgpt"
+    (bin/"chatgpt").write <<~SH
+      #!/bin/bash
+      exec "#{libexec}/ChatGPT" "$@"
+    SH
     (share/"applications").install "usr/share/applications/chatgpt.desktop"
     (share/"pixmaps").install "usr/share/pixmaps/chatgpt.png"
   end
