@@ -6,6 +6,7 @@ Homebrew tap for `codegod100` formulae.
 brew tap codegod100/tap
 brew install sleek
 brew install claude-desktop
+brew install buildbuddy-cli
 ```
 
 `sleek` here is the [freeq](https://tangled.org/nandi.uk/sleek) mobile
@@ -21,3 +22,12 @@ unsandboxed Homebrew formula instead of via Flatpak — same upstream
 and a `.desktop`/icon set, no Flatpak sandbox involved. See the
 formula's `caveats` for one-time desktop-menu registration and how to
 carry over an existing Flatpak login.
+
+`buildbuddy-cli` installs BuildBuddy's `bb` CLI
+(https://www.buildbuddy.io/cli), a Bazel wrapper built on Bazelisk.
+Upstream's own install script (`curl -fsSL https://install.buildbuddy.io
+| bash`) hardcodes `sudo mv ... /usr/local/bin/bb`, which fails on any
+system where `/usr/local/bin` is read-only or there's no `sudo` at all.
+This formula fetches the same per-platform release binaries from
+https://github.com/buildbuddy-io/bazel/releases and installs `bb` into
+this formula's own prefixed `bin/` instead.
